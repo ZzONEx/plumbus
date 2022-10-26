@@ -1,0 +1,1 @@
+insert into Administrator (username, password) values ('Rick Sanchez', 'jGF2_xEjm_ybt)1');

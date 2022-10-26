@@ -1,0 +1,33 @@
+﻿<Window x:Class="plumbusS.test2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:plumbusS"
+        mc:Ignorable="d"
+        Title="Тест" Height="1024" Width="1440"  ResizeMode="CanMinimize" >
+    <Grid>
+        <Grid>
+            <Grid>
+                <Grid>
+                    <Grid HorizontalAlignment="Left" Width="2307" Margin="0,0,0,-866">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="13*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="113*"/>
+                            <ColumnDefinition Width="67*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/test v2.png" Height="1024" Width="1440"/>
+                        <Button x:Name="krombopulus" Content="КРОМБОПУЛУС МАЙК" HorizontalAlignment="Left" Height="84" Margin="741,368,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30" Foreground="#FFFFFF" Click="krombopulus_Click"  />
+                        <Button x:Name="karandahylik" Content="КАРАНДАШУЛИК" HorizontalAlignment="Left" Height="84" Margin="741,457,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="karandahylik_Click" />
+                        <Button x:Name="misiks" Content="МИСИКС" HorizontalAlignment="Left" Height="84" Margin="741,546,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="misiks_Click" />
+                        <Button x:Name="yniti" Content="ЮНИТИ" HorizontalAlignment="Left" Height="84" Margin="741,635,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="yniti_Click" />
+
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
