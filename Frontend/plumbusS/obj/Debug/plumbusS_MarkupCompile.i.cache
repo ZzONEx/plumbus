@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Maxim\Desktop\Плюмбус\plumbusS\plumbusS\obj\Debug\
+C:\Users\USER\Desktop\plumbusS\plumbusS\obj\Debug\
 plumbusS
 none
 false
 DEBUG;TRACE
-C:\Users\Maxim\Desktop\Плюмбус\plumbusS\plumbusS\App.xaml
-11-601683956
+C:\Users\USER\Desktop\plumbusS\plumbusS\App.xaml
+111501211800
 
-16-1456244003
-13-1505183044
-ADMIN.xaml;INPUT.xaml;MainWindow.xaml;REGISTR.xaml;STUDENT.xaml;teacher.xaml;test1.xaml;test2.xaml;test3.xaml;test4.xaml;ZAVOD.xaml;
+16-1284067544
+14-207034072
+Admin.xaml;Login.xaml;MainWindow.xaml;Registration.xaml;Student.xaml;Teacher.xaml;Test1.xaml;Test2.xaml;Test3.xaml;Test4.xaml;Plant.xaml;
 
 True
 

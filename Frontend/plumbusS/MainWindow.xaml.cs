@@ -2,6 +2,14 @@
 
 namespace plumbusS
 {
+    /*
+     * This application was developed by students of UETK SGU:
+     *      Maksim - TeamLeader
+     *      Konstantin - Front-end
+     *      Mikhail - Back-end
+     *      Egor - FullStack
+     *      Nikita - Tester
+     */
     public partial class MainWindow : Window
     {        
         public MainWindow()
@@ -9,17 +17,16 @@ namespace plumbusS
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ToRegistration_Click(object sender, RoutedEventArgs e)
         {
-            REGISTR registr = new REGISTR();
-            registr.Show();
+            Registration registration = new Registration();
+            registration.Show();
             this.Close();
-                
         }
-
-        private void protest_Click(object sender, RoutedEventArgs e)
+        
+        private void RunTest_Click(object sender, RoutedEventArgs e)
         {
-            test1 test1 = new test1(); 
+            Test1 test1 = new Test1();
             test1.Show();
             this.Close();
         }

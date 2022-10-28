@@ -3,9 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:plumbusS"
         mc:Ignorable="d"
-        Title="Главное окно" Height="1773" Width="1440" ResizeMode="CanMinimize">
+        Title="Главная страница" Height="1773" Width="1440" ResizeMode="CanMinimize">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -65,20 +64,17 @@
     </Window.Resources>
 
     <Grid>
-       
-
         <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Margin="10,10,10,10">
             <Canvas Width="1420" Height="1713" >
                 <Canvas.Background>
                     <VisualBrush  >
                         <VisualBrush.Visual>
-                            <Image x:Name="image" Source="/Новое окно.png" Stretch="Fill" />
+                            <Image x:Name="image" Source="/Images/MainWindow.png" Stretch="Fill" />
                         </VisualBrush.Visual>
                     </VisualBrush>
                 </Canvas.Background>
-
-                <Button  Style="{DynamicResource ButtonStyle1}" Content="Вход/Регистрация" Canvas.Left="1179" Canvas.Top="48" Height="47" Width="192" Background="#EFFBF8" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="18" Click="Button_Click" />
-                <Button x:Name="protest" Style="{DynamicResource ButtonStyle1}" Content="Пройти тест" Height="44" Canvas.Left="655" Canvas.Top="1134" Width="147" Background="#E7FDF9" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Top"  FontSize="18" Click="protest_Click" />
+                <Button Style="{DynamicResource ButtonStyle1}" Content="Вход/Регистрация" Canvas.Left="1179" Canvas.Top="48" Height="47" Width="192" Background="#EFFBF8" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="18" Click="ToRegistration_Click" />
+                <Button x:Name="protest" Style="{DynamicResource ButtonStyle1}" Content="Пройти тест" Height="44" Canvas.Left="655" Canvas.Top="1134" Width="147" Background="#E7FDF9" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Top"  FontSize="18" Click="RunTest_Click" />
             </Canvas>
         </ScrollViewer>
     </Grid>
