@@ -19,10 +19,10 @@
                             <ColumnDefinition Width="67*"/>
                         </Grid.ColumnDefinitions>
                         <Image Source="/Images/Test3.png" Height="1024" Width="1440"/>
-                        <Button x:Name="ydheri" Content="У ДЖЕРИ" HorizontalAlignment="Left" Height="84" Margin="741,368,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30" Foreground="#FFFFFF" Click="Ydheri_Click"  />
-                        <Button x:Name="yseba" Content="У СВОЕГО ОТРАЖЕНИЯ В ЗЕРКАЛЕ" HorizontalAlignment="Left" Height="84" Margin="741,457,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="Yseba_Click" />
-                        <Button x:Name="ysamer" Content="У САММЕР" HorizontalAlignment="Left" Height="84" Margin="741,546,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="Ysamer_Click" />
-                        <Button x:Name="yrika" Content="У РИКА" HorizontalAlignment="Left" Height="84" Margin="741,635,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="Yrika_Click" />
+                        <Button x:Name="ydheri" Content="У ДЖЕРИ" HorizontalAlignment="Left" Height="84" Margin="741,368,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30" Foreground="#FFFFFF" Click="ChoiceOfAnswer_Click"/>
+                        <Button x:Name="yseba" Content="У СВОЕГО ОТРАЖЕНИЯ В ЗЕРКАЛЕ" HorizontalAlignment="Left" Height="84" Margin="741,457,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="ChoiceOfAnswer_Click"/>
+                        <Button x:Name="ysamer" Content="У САММЕР" HorizontalAlignment="Left" Height="84" Margin="741,546,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="ChoiceOfAnswer_Click"/>
+                        <Button x:Name="yrika" Content="У РИКА" HorizontalAlignment="Left" Height="84" Margin="741,635,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="ChoiceOfAnswer_Click"/>
 
                     </Grid>
                 </Grid>

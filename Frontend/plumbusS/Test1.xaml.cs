@@ -1,6 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace plumbusS
 {
@@ -11,44 +10,24 @@ namespace plumbusS
             InitializeComponent();
         }
 
-        private void Gazorp_Click(object sender, RoutedEventArgs e)
+        private void ChoiceOfAnswer_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"МОРТИ МЛАДШИЙ\"");
-            Test2 test2 = new Test2();
-            test2.Show();
-            this.Close();
-        }
+            int score = 0;
+            // Получаем кнопку, которая вызвала данную функцию
+            Button srcButton = e.Source as Button;
 
-        private void Ralf_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"МОРТИ МЛАДШИЙ\"");
-            Test2 test2 = new Test2();
+            if (srcButton.Name == "mortimalen")
+            {
+                score++;
+                MessageBox.Show($"Вы ответили верно!\nВаш счёт: {score}");
+            }
+            else
+            {
+                MessageBox.Show($"Вы ответили неверно!\nВаш счёт: {score}");
+            }
+            Test2 test2 = new Test2(score);
             test2.Show();
-            this.Close();
-        }
-
-        private void Mortimalen_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Вы ответили верно!");
-            StreamReader f = new StreamReader("test.txt");
-            string s = f.ReadLine();
-            f.Close();
-            int q = Convert.ToInt32(s);
-            q++;
-            StreamWriter x = new StreamWriter("test.txt");
-            x.WriteLine(q);
-            x.Close();
-            Test2 test2 = new Test2();
-            test2.Show();
-            this.Close();
-        }
-
-        private void Minimorti_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"МОРТИ МЛАДШИЙ\"");
-            Test2 test2 = new Test2();
-            test2.Show();
-            this.Close();
+            Close();
         }
     }
 }

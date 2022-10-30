@@ -1,54 +1,35 @@
-﻿using System;
-using System.IO;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace plumbusS
 {
     public partial class Test2 : Window
     {
-        public Test2()
+        private int score;
+
+        public Test2(int score)
         {
+            this.score = score;
             InitializeComponent();
         }
 
-        private void Krombopulus_Click(object sender, RoutedEventArgs e)
+        private void ChoiceOfAnswer_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"ЮНИТИ\"");
-            Test3 test3 = new Test3();
-            test3.Show();
-            this.Close();
-        }
+            // Получаем кнопку, которая вызвала данную функцию
+            Button srcButton = e.Source as Button;
 
-        private void Karandahylik_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"ЮНИТИ\"");
-            Test3 test3 = new Test3();
+            if (srcButton.Name == "yniti")
+            {
+                score++;
+                MessageBox.Show($"Вы ответили верно!\nВаш счёт: {score}");
+            }
+            else
+            {
+                MessageBox.Show($"Вы ответили неверно!\nВаш счёт: {score}");
+            }
+            Test3 test3 = new Test3(score);
             test3.Show();
-            this.Close();
-        }
-
-        private void Misiks_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"ЮНИТИ\"");
-            Test3 test3 = new Test3();
-            test3.Show();
-            this.Close();
-        }
-
-        private void Uniti_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Вы ответили верно!");
-            StreamReader f = new StreamReader("test.txt");
-            string s = f.ReadLine();
-            f.Close();
-            int q = Convert.ToInt32(s);
-            q++;
-            StreamWriter x = new StreamWriter("test.txt");
-            x.WriteLine(q);
-            x.Close();
-            Test3 test3 = new Test3();
-            test3.Show();
-            this.Close();
+            Close();
         }
     }
 }

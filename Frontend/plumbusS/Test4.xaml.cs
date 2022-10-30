@@ -1,74 +1,44 @@
-﻿using System;
-using System.IO;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace plumbusS
 {
     public partial class Test4 : Window
     {
-        public Test4()
+        private int score;
+        private bool flag = true;
+
+        public Test4(int score)
         {
+            this.score = score;
             InitializeComponent();
         }
 
-        private void Popygai_Click(object sender, RoutedEventArgs e)
+        private void ChoiceOfAnswer_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"ДЕНЬГИ\"");
-            StreamReader f = new StreamReader("test.txt");
-            string s = f.ReadLine();
-            f.Close();
-            int q = Convert.ToInt32(s);
-            StreamWriter x = new StreamWriter("test.txt");
-            x.WriteLine(q);
-            x.Close();
-            MessageBox.Show($"Вы набрали {q} баллов");
-        }
+            // Получаем кнопку, которая вызвала данную функцию
+            Button srcButton = e.Source as Button;
 
-        private void Ingridient_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"ДЕНЬГИ\"");
-            StreamReader f = new StreamReader("test.txt");
-            string s = f.ReadLine();
-            f.Close();
-            int q = Convert.ToInt32(s);
-            StreamWriter x = new StreamWriter("test.txt");
-            x.WriteLine(q);
-            x.Close();
-            MessageBox.Show($"Вы набрали {q} баллов");
-        }
-
-        private void Planet_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"ДЕНЬГИ\"");
-            StreamReader f = new StreamReader("test.txt");
-            string s = f.ReadLine();
-            f.Close();
-            int q = Convert.ToInt32(s);
-            StreamWriter x = new StreamWriter("test.txt");
-            x.WriteLine(q);
-            x.Close();
-            MessageBox.Show($"Вы набрали {q} баллов");
-        }
-
-        private void Money_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Вы ответили верно!");
-            StreamReader f = new StreamReader("test.txt");
-            string s = f.ReadLine();
-            f.Close();
-            int q = Convert.ToInt32(s);
-            q++;
-            StreamWriter x = new StreamWriter("test.txt");
-            x.WriteLine(q);
-            x.Close();
-            MessageBox.Show($"Вы набрали {q} баллов");
+            if (srcButton.Name == "money")
+            {
+                if (flag == true)
+                {
+                    score++;
+                }
+                MessageBox.Show($"Вы ответили верно!\nВаш счёт: {score}");
+            }
+            else
+            {
+                MessageBox.Show($"Вы ответили неверно!\nВаш счёт: {score}");
+            }
+            flag = false;
         }
 
         private void ToMainWindow_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            this.Close();
-        }
+            Close();
+        } 
     }
 }

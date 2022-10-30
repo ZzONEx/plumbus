@@ -1,54 +1,35 @@
-﻿using System;
-using System.IO;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace plumbusS
 {
     public partial class Test3 : Window
     {
-        public Test3()
+        private int score;
+
+        public Test3(int score)
         {
+            this.score = score;
             InitializeComponent();
         }
 
-        private void Ydheri_Click(object sender, RoutedEventArgs e)
+        private void ChoiceOfAnswer_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"У САММЕР\"");
-            Test4 test4 = new Test4();
-            test4.Show();
-            this.Close();
-        }
+            // Получаем кнопку, которая вызвала данную функцию
+            Button srcButton = e.Source as Button;
 
-        private void Yseba_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"У САММЕР\"");
-            Test4 test4 = new Test4();
+            if (srcButton.Name == "ysamer")
+            {
+                score++;
+                MessageBox.Show($"Вы ответили верно!\nВаш счёт: {score}");
+            }
+            else
+            {
+                MessageBox.Show($"Вы ответили неверно!\nВаш счёт: {score}");
+            }
+            Test4 test4 = new Test4(score);
             test4.Show();
-            this.Close();
-        }
-
-        private void Ysamer_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Вы ответили верно!");
-            StreamReader f = new StreamReader("test.txt");
-            string s = f.ReadLine();
-            f.Close();
-            int q = Convert.ToInt32(s);
-            q++;
-            StreamWriter x = new StreamWriter("test.txt");
-            x.WriteLine(q);
-            x.Close();
-            Test4 test4 = new Test4();
-            test4.Show();
-            this.Close();
-        }
-
-        private void Yrika_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Ответ неверный. Правильный ответ: \"У САММЕР\"");
-            Test4 test4 = new Test4();
-            test4.Show();
-            this.Close();
+            Close();
         }
     }
 }

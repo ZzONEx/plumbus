@@ -76,10 +76,10 @@
                             <ColumnDefinition Width="67*"/>
                         </Grid.ColumnDefinitions>
                         <Image Source="/Images/Test4.png" Height="1024" Width="1440"/>
-                        <Button x:Name="popygai" Content="ПОПУГАЙ" HorizontalAlignment="Left" Height="84" Margin="741,368,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30" Foreground="#FFFFFF" Click="Popygai_Click"  />
-                        <Button x:Name="ingridient" Content="ИНГЕРЕДИЕНТ ПЛЮМБУСА" HorizontalAlignment="Left" Height="84" Margin="741,457,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="Ingridient_Click" />
-                        <Button x:Name="planet" Content="ПЛАНЕТА" HorizontalAlignment="Left" Height="84" Margin="741,546,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="Planet_Click" />
-                        <Button x:Name="money" Content="ДЕНЬГИ" HorizontalAlignment="Left" Height="84" Margin="741,635,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="Money_Click" />
+                        <Button x:Name="popygai" Content="ПОПУГАЙ" HorizontalAlignment="Left" Height="84" Margin="741,368,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30" Foreground="#FFFFFF" Click="ChoiceOfAnswer_Click"  />
+                        <Button x:Name="ingridient" Content="ИНГЕРЕДИЕНТ ПЛЮМБУСА" HorizontalAlignment="Left" Height="84" Margin="741,457,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="ChoiceOfAnswer_Click" />
+                        <Button x:Name="planet" Content="ПЛАНЕТА" HorizontalAlignment="Left" Height="84" Margin="741,546,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="ChoiceOfAnswer_Click" />
+                        <Button x:Name="money" Content="ДЕНЬГИ" HorizontalAlignment="Left" Height="84" Margin="741,635,0,0" VerticalAlignment="Top" Width="486" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="ChoiceOfAnswer_Click" />
                         <Button Style="{DynamicResource ButtonStyle1}" Content="Завершить тест" HorizontalAlignment="Left" Height="70" Margin="547,813,0,0" VerticalAlignment="Top" Width="311" Background="#CEC4C4" BorderThickness="1" FontSize="30"  Foreground="#FFFFFF" Click="ToMainWindow_Click"/>
 
                     </Grid>
