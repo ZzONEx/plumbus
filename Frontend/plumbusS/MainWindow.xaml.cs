@@ -9,6 +9,7 @@ namespace plumbusS
      *      Mikhail - Back-end
      *      Egor - FullStack
      *      Nikita - Tester
+     *      Kristina - Graphic Designer
      */
     public partial class MainWindow : Window
     {        
@@ -21,14 +22,14 @@ namespace plumbusS
         {
             Registration registration = new Registration();
             registration.Show();
-            this.Close();
+            Close();
         }
         
         private void RunTest_Click(object sender, RoutedEventArgs e)
         {
             Test1 test1 = new Test1();
             test1.Show();
-            this.Close();
+            Close();
         }
     }
 }
