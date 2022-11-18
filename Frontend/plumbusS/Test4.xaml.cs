@@ -36,7 +36,12 @@ namespace plumbusS
 
         private void ToMainWindow_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow()
+            {
+                WindowStartupLocation = WindowStartupLocation,
+                Left = Left,
+                Top = Top
+            };
             mainWindow.Show();
             Close();
         } 

@@ -27,7 +27,12 @@ namespace plumbusS
             {
                 MessageBox.Show($"Вы ответили неверно!\nВаш счёт: {score}");
             }
-            Test4 test4 = new Test4(score);
+            Test4 test4 = new Test4(score)
+            {
+                WindowStartupLocation = WindowStartupLocation,
+                Left = Left,
+                Top = Top
+            };
             test4.Show();
             Close();
         }

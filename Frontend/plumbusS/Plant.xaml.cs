@@ -25,7 +25,12 @@ namespace plumbusS
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            Login login = new Login();
+            Login login = new Login()
+            {
+                WindowStartupLocation = WindowStartupLocation,
+                Left = Left,
+                Top = Top
+            };
             login.Show();
             this.Close();
         }

@@ -80,7 +80,8 @@
 
                 </DataGrid>
                 <Image Source="/Images/BackButton.png" HorizontalAlignment="Left" Height="34" Margin="10,10,0,0" VerticalAlignment="Top" Width="40"/>
-                <Button x:Name="Назад" Click="BackButton_Click" HorizontalAlignment="Left" Height="35.5" Margin="9,9,0,0" VerticalAlignment="Top" Width="41.8" Background="Transparent"/>
+                <Button x:Name="Назад" Click="BackButton_Click" HorizontalAlignment="Left" Height="35.5" Margin="9,9,0,0" VerticalAlignment="Top" Width="41.8" Background="Transparent" BorderThickness="0"/>
+                <TextBox x:Name="InfoBox" IsReadOnly="True" FontSize="20" Foreground="#7AB929" HorizontalAlignment="Left" Height="60" Margin="117,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" BorderThickness="0"/>
             </Grid>
         </Grid>
     </Grid>

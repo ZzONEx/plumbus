@@ -26,14 +26,24 @@ namespace plumbusS
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow()
+            {
+                WindowStartupLocation = WindowStartupLocation,
+                Left = Left,
+                Top = Top
+            };
             mainWindow.Show();
             this.Close();
         }
 
         private void ToRegistration_Click(object sender, RoutedEventArgs e)
         {
-            Registration registration = new Registration();
+            Registration registration = new Registration()
+            {
+                WindowStartupLocation = WindowStartupLocation,
+                Left = Left,
+                Top = Top
+            };
             registration.Show();
             this.Close();
         }
@@ -58,7 +68,12 @@ namespace plumbusS
 
                 if (adminExist)
                 {
-                    Admin admin = new Admin();
+                    Admin admin = new Admin()
+                    {
+                        WindowStartupLocation = WindowStartupLocation,
+                        Left = Left,
+                        Top = Top
+                    };
                     admin.Show();
                     this.Close();
                 }
@@ -81,7 +96,12 @@ namespace plumbusS
                 
                 if (adminExist)
                 {
-                    Teacher teacher = new Teacher();
+                    Teacher teacher = new Teacher()
+                    {
+                        WindowStartupLocation = WindowStartupLocation,
+                        Left = Left,
+                        Top = Top
+                    };
                     teacher.Show();
                     this.Close();
                 }
@@ -114,7 +134,12 @@ namespace plumbusS
                     int pupilId = Convert.ToInt32(getPupilId.ExecuteScalar());
                     sqlConnection.Close();
 
-                    Student student = new Student(pupilId);
+                    Student student = new Student(pupilId, login)
+                    {
+                        WindowStartupLocation = WindowStartupLocation,
+                        Left = Left,
+                        Top = Top
+                    };
                     student.Show();
                     this.Close();
                 }
@@ -137,7 +162,12 @@ namespace plumbusS
 
                 if (adminExist)
                 {
-                    Plant plant = new Plant();
+                    Plant plant = new Plant()
+                    {
+                        WindowStartupLocation = WindowStartupLocation,
+                        Left = Left,
+                        Top = Top
+                    };
                     plant.Show();
                     this.Close();
                 }

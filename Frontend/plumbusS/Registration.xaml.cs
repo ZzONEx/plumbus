@@ -19,7 +19,12 @@ namespace plumbusS
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow()
+            {
+                WindowStartupLocation = WindowStartupLocation,
+                Left = Left,
+                Top = Top
+            };
             mainWindow.Show();
             this.Close();
         }
@@ -34,7 +39,12 @@ namespace plumbusS
 
         private void BackToLogin_Click(object sender, RoutedEventArgs e)
         {
-            Login login = new Login();
+            Login login = new Login()
+            {
+                WindowStartupLocation = WindowStartupLocation,
+                Left = Left,
+                Top = Top
+            };
             login.Show();
             this.Close();
         }
@@ -96,7 +106,12 @@ namespace plumbusS
                     int pupilId = Convert.ToInt32(getPupilId.ExecuteScalar());
                     sqlConnection.Close();
 
-                    Student student = new Student(pupilId);
+                    Student student = new Student(pupilId, login)
+                    {
+                        WindowStartupLocation = WindowStartupLocation,
+                        Left = Left,
+                        Top = Top
+                    };
                     student.Show();
                     this.Close();
                 }
@@ -128,7 +143,12 @@ namespace plumbusS
                     addPlant.ExecuteNonQuery();
                     sqlConnection.Close();
 
-                    Plant plant = new Plant();
+                    Plant plant = new Plant()
+                    {
+                        WindowStartupLocation = WindowStartupLocation,
+                        Left = Left,
+                        Top = Top
+                    };
                     plant.Show();
                     this.Close();
                 }

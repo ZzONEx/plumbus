@@ -9,17 +9,26 @@ namespace plumbusS
     {
         SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["PlumbusDBConnection"].ConnectionString);
         public int pupilId;
+        public string logIn;
 
-        public Student(int pupilID)
+        public Student(int pupilID, string login_)
         {
             InitializeComponent();
             pupilId = pupilID;
+            logIn = login_;
             GetStatistics_Click(null, null);
+
+            InfoBox.Text = $"Номер студента: {pupilId}\nЛогин студента: {logIn}";
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            Login login = new Login();
+            Login login = new Login()
+            {
+                WindowStartupLocation = WindowStartupLocation,
+                Left = Left,
+                Top = Top
+            };
             login.Show();
             this.Close();
         }

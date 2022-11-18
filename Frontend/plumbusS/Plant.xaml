@@ -124,7 +124,7 @@
                     <TextBox x:Name="Brak_TB" KeyDown="EnterKeyDown" TextAlignment="Center" Style="{DynamicResource TextBoxStyle1}" HorizontalAlignment="Left" Height="58" Margin="888,651,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="455" Background="#E1EEFA" FontSize="20" />
                     <Button x:Name="Send" Style="{DynamicResource ButtonStyle1}" Content="Оправить" HorizontalAlignment="Left" Height="63" Margin="1013,865,0,0" VerticalAlignment="Top" Width="206" Background="#E1EEFA" FontSize="20" Click="AddPlumbus_Click"/>
                     <Image HorizontalAlignment="Left" Height="34" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" Source="/Images/BackButton.png"/>
-                    <Button x:Name="Назад" Click="BackButton_Click" HorizontalAlignment="Left" Height="35.5" Margin="9,9,0,0" VerticalAlignment="Top" Width="41.8" Background="Transparent"/>
+                    <Button x:Name="Назад" BorderThickness="0" Click="BackButton_Click" HorizontalAlignment="Left" Height="35.5" Margin="9,9,0,0" VerticalAlignment="Top" Width="41.8" Background="Transparent"/>
                     <Border HorizontalAlignment="Left" Height="32" Margin="915,612,0,0" VerticalAlignment="Top" Width="272">
                         <TextBlock Background="White" FontSize="18">Кол-во бракованного товара</TextBlock>
                     </Border>

@@ -9,7 +9,6 @@ namespace plumbusS
      *      Mikhail - Back-end
      *      Egor - FullStack
      *      Nikita - Tester
-     *      Kristina - Graphic Designer
      */
     public partial class MainWindow : Window
     {        
@@ -20,16 +19,26 @@ namespace plumbusS
 
         private void ToRegistration_Click(object sender, RoutedEventArgs e)
         {
-            Registration registration = new Registration();
+            Registration registration = new Registration()
+            {
+                WindowStartupLocation = WindowStartupLocation,
+                Left = Left,
+                Top = Top
+            };
             registration.Show();
-            Close();
+            this.Close();
         }
         
         private void RunTest_Click(object sender, RoutedEventArgs e)
         {
-            Test1 test1 = new Test1();
+            Test1 test1 = new Test1()
+            {
+                WindowStartupLocation = WindowStartupLocation,
+                Left = Left,
+                Top = Top
+            };
             test1.Show();
-            Close();
+            this.Close();
         }
     }
 }
