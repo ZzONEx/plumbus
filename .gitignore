@@ -1,3 +1,17 @@
 # Compressed files
 *.zip
 
+# Database backup
+**/*.bacpac
+**/*.bak
+
+# Environment
+**/.vs/
+
+# Visual Studio
+**/Debug/
+**/Release/
+**/Properties/
+**/*.sln
+**/*.csproj
+**/*.csproj.user
